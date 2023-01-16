@@ -1,9 +1,16 @@
+import { Fragment } from "react";
+import Header from "./components/Header";
+import InputSong from "./components/InputSong";
+import Playlist from "./components/Playlist";
 
 function App() {
+
   return (
-    <div>
-      <h1>This is Songsaver App</h1>
-    </div>
+    <Fragment>
+      <Header />
+      <InputSong />
+      <Playlist />
+    </Fragment>
   );
 }
 

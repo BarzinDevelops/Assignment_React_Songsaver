@@ -1,0 +1,65 @@
+.input-card {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    border: 3px solid blue;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.2);
+    background-color: #f4f0fa;
+  }
+  
+  .control {
+    /* border: 3px solid red; */
+    display: flex;
+    gap: 10px;
+     align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.15rem;
+  }
+  
+  .control label {
+    color: #616161;
+  }
+  
+  .control input {
+    outline: none;
+    border-radius: 4px;
+    padding: 0.25rem;
+    border: 1px solid #ccc;
+  }
+
+option:first-child
+{
+    color: #ccc;
+}
+/* option::selection
+{
+    color: #000;
+} */
+option
+{
+    color: #000;
+}
+ /* 
+  .selectors{
+
+    margin-bottom: 0.15rem;
+
+  }
+  .selectors select{
+    color: black;
+    padding: 0.25rem;
+    outline: none;
+    border: 1px solid #ccc;
+    
+  } 
+  .selectors select:first-child{
+    color: red;
+  }
+ option:first-child {
+    color: red;
+  } 
+  .selectors  {
+    color: black;
+  } 
+  */
