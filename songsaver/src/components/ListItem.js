@@ -1,7 +1,6 @@
 import React from "react";
 
 const ListItem = (props) => {
-    // console.log('in ListItem: props =>', props)
   return (
     <tr>
       <td>{props.song.id}</td>
