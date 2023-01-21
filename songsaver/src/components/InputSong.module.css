@@ -1,65 +1,57 @@
 .input-card {
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    border: 3px solid blue;
-    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.2);
-    background-color: #f4f0fa;
-  }
-  
-  .control {
-    /* border: 3px solid red; */
-    display: flex;
-    gap: 10px;
-     align-items: center;
-    justify-content: space-between;
-    margin-bottom: 0.15rem;
-  }
-  
-  .control label {
-    color: #616161;
-  }
-  
-  .control input {
-    outline: none;
+  width: 100%;
+  gap: 15px;
+  /* border: 3px solid blue; */
+  padding: 20px;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.2);
+  background-color: #f4f0fa;
+}
+form {
+  /* border: 3px solid purple; */
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-column-gap: 6px;
+}
+.control {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  /* border: 3px solid red; */
+  padding: 0.5rem;
+}
+
+.control input {
+  /* width: 150px; */
+  outline: none;
+  border-radius: 4px;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+}
+.selectors {
+    /* border: 3px solid green; */
+    padding: 0.5rem;
+}
+.selectors select {
     border-radius: 4px;
-    padding: 0.25rem;
-    border: 1px solid #ccc;
-  }
-
-option:first-child
-{
-    color: #ccc;
+  color: black;
+  width: 100%;
+  padding: 0.5rem;
+  outline: none;
+  border: 1px solid #ccc;
 }
-/* option::selection
-{
-    color: #000;
-} */
-option
-{
-    color: #000;
+form button {
+    width: 100px;
+    background-color: #5305ad;
+    color: whitesmoke;
+    padding: 15px;
+    border: none;
+    border-radius: 4px;
 }
- /* 
-  .selectors{
+form button:hover  {
+    background-color: #3c0080;
 
-    margin-bottom: 0.15rem;
+}
+.add-btn{
+   display: flex;
+   align-items: center;
 
-  }
-  .selectors select{
-    color: black;
-    padding: 0.25rem;
-    outline: none;
-    border: 1px solid #ccc;
-    
-  } 
-  .selectors select:first-child{
-    color: red;
-  }
- option:first-child {
-    color: red;
-  } 
-  .selectors  {
-    color: black;
-  } 
-  */
+}

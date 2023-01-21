@@ -21,12 +21,19 @@ const InputSong = () => {
                     <option value="Rock">Rock</option>
                 </select>
               </div>
-              <div className={classes.control}>
-                <label htmlFor='rating'>Rating</label>
-                <input type='text' id='rating' />
+              <div className={classes.selectors}>
+                <select>
+                    <option value="none" >Give your rating</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
               </div>
-
-              <button>Login</button>
+                <div className={classes['add-btn']}>
+                    <button>Add Song</button>
+                </div>
+              
             </form>
           </section>
         </main>
