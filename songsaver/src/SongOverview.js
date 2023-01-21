@@ -16,6 +16,13 @@ class SongOverview extends Component {
           genre: "pop",
           rating: "4",
         },
+        {
+          id: 2,
+          title: "billi jean",
+          artist: "Michael Jackson",
+          genre: "Rock",
+          rating: "5",
+        },
       ],
     };
     this.addSong = this.addSong.bind(this);
@@ -44,11 +51,14 @@ class SongOverview extends Component {
     e.target.reset();
   };
 
-  removeSong = (e, song) =>{
-    e.preventDefault();
-    this.addSong(song);
-    e.target.reset();
+
+  removeSong = (event) =>{
+   this.setState(prevState => {
+    const newSongs = prevState.songs.filter(item => item.id !== event.id);
+    return {songs: newSongs}
+   });
   };
+
 
   sortSongTitle = (e, song) =>{
     const songAscending = [...this.state.songs].sort((a, b) =>
