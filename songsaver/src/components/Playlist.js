@@ -1,9 +1,16 @@
 import React from "react";
+import ListItem from "./ListItem";
 
-import classes from "./Playlist.module.css";
-
-const Playlist = () => {
-    
+const Playlist = (props) => {
+  return (
+    <tbody className="song">
+      {props.songs.map((song) => {
+        return (
+          <ListItem key={song.id} song={song} removeSong={props.removeSong} />
+        );
+      })}
+    </tbody>
+  );
 };
 
 export default Playlist;
