@@ -1,16 +1,17 @@
 import React from "react";
+import "./sort.css";
 
 const SortRating = (props) => {
-    return(
-        <select className="song-sort">
-        <option value="none" >Give your rating</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-    </select>
-    );
+  const sortByRatingHandler = (event) =>{
+    props.sortRating(event);
+  };
+  return (
+      <select className="song-sort" onChange={sortByRatingHandler}>
+        <option value="none">Sort by rating</option>
+        <option value="1-5">1-5</option>
+        <option value="5-1">5-1</option>
+      </select>
+  );
 };
 
 export default SortRating;

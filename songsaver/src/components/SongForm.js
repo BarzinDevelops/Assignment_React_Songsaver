@@ -1,5 +1,5 @@
 import React from "react";
-import SubmitButton from "./SubmitButton";
+import Button from "./Button";
 import classes from "./SongForm.module.css";
 
 const SongForm = (props) => {
@@ -62,9 +62,10 @@ const SongForm = (props) => {
           <option value="2">2</option>
           <option value="3">3</option>
           <option value="4">4</option>
+          <option value="5">5</option>
         </select>
         </div>
-        <SubmitButton />
+        <Button name={'Add Song'} />
       </form>
     </div>
   );

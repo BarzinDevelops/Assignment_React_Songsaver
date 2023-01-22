@@ -1,8 +1,10 @@
 import { React, Component } from "react";
 import SongForm from "./components/SongForm";
-import SortSection from "./components/sort-components/SortTitle";
-import SortRating from "./components/sort-components/SortRating";
 import SongTable from "./components/SongTable";
+import classes from "./SongOverview.module.css";
+
+import SortTitle from "./components/sort-components/SortTitle";
+import SortRating from "./components/sort-components/SortRating";
 
 class SongOverview extends Component {
   constructor() {
@@ -31,7 +33,6 @@ class SongOverview extends Component {
     this.sortSongTitle = this.sortSongTitle.bind(this);
     this.sortSongRating = this.sortSongRating.bind(this);
   }
-
   addSong = (song) => {
     if (
       song.title === "" ||
@@ -39,67 +40,59 @@ class SongOverview extends Component {
       song.genre === "" ||
       song.rating === ""
     ) {
-        console.log('You have to provide value!!!');
+      console.log("You have to provide value!!!");
     } else {
-        this.setState({songs: [...this.state.songs, song]})
+      this.setState({ songs: [...this.state.songs, song] });
     }
   };
-
-  handleSubmit = (e, song) =>{
+  handleSubmit = (e, song) => {
     e.preventDefault();
     this.addSong(song);
     e.target.reset();
   };
-
-
-  removeSong = (event) =>{
-   this.setState(prevState => {
-    const newSongs = prevState.songs.filter(item => item.id !== event.id);
-    return {songs: newSongs}
-   });
+  removeSong = (event) => {
+    this.setState((prevState) => {
+      const newSongs = prevState.songs.filter((item) => item.id !== event.id);
+      return { songs: newSongs };
+    });
   };
-
-
-  sortSongTitle = (e, song) =>{
+  sortSongTitle = (e) => {
     const songAscending = [...this.state.songs].sort((a, b) =>
-    a.title > b.title ? 1 : -1
-  );
-  const songDescending = [...this.state.songs].sort((a, b) =>
-    a.title > b.title ? -1 : 1
-  );
-  e.target.value === "a-z"
-    ? this.setState({ songs: songAscending })
-    : this.setState({ songs: songDescending });
+      a.title > b.title ? 1 : -1
+    );
+    const songDescending = [...this.state.songs].sort((a, b) =>
+      a.title > b.title ? -1 : 1
+    );
+    e.target.value === "a-z"
+      ? this.setState({ songs: songAscending })
+      : this.setState({ songs: songDescending });
   };
-
-  sortSongRating = (e, song) =>{
+  sortSongRating = (e) => {
     const ratingAscending = [...this.state.songs].sort(
-        (a, b) => a.rating - b.rating
-      );
-      const ratingDescending = [...this.state.songs].sort(
-        (a, b) => b.rating - a.rating
-      );
-      e.target.value === "1-5"
-        ? this.setState({ songs: ratingAscending })
-        : this.setState({ songs: ratingDescending });
+      (a, b) => a.rating - b.rating
+    );
+    const ratingDescending = [...this.state.songs].sort(
+      (a, b) => b.rating - a.rating
+    );
+    e.target.value === "1-5"
+      ? this.setState({ songs: ratingAscending })
+      : this.setState({ songs: ratingDescending });
   };
-
   render() {
     return (
-      <div className="songSaver-container">
+      <div className={classes["songSaver-container"]}>
         <SongForm
           addSong={this.addSong}
           submit={this.handleSubmit}
           songs={this.state.songs}
         />
-        <div className="sort-container">
-          <SortSection
-            sortTitle={this.sortSongTitle}
-            sortRating={this.sortSongRating}
-          />
-          <SortRating sortRating={this.sortSongRating} />
+        <div className={classes.sortsection}>
+          <SortTitle sortTitle={this.sortSongTitle}/>
+          <SortRating sortRating={this.sortSongRating}/>
         </div>
-        <SongTable songs={this.state.songs} removeSong={this.removeSong} />
+        <SongTable songs={this.state.songs} removeSong={this.removeSong}>
+          <div>dit is song table</div>
+        </SongTable>
       </div>
     );
   }

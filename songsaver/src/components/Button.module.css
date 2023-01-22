@@ -1,0 +1,16 @@
+.button {
+  background-color: #5305ad;
+  color: whitesmoke;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+}
+.button:hover {
+  outline: none;
+  background-color: #2b015b;
+}
+
+.button:focus {
+  outline: none;
+  background-color: #2b015b;
+}

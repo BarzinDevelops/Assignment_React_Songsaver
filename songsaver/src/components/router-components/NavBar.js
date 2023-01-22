@@ -1,7 +1,9 @@
 import React from "react";
-function NavBar() {
+import classes from './NavBar.module.css';
+
+const NavBar = () => {
   return (
-    <div className="nav-bar">
+    <div className={classes["nav-bar"]}>
       <h1>Songsaver</h1>
       <ul>
         <li className="nav-bar__item">

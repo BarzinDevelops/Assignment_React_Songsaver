@@ -1,0 +1,15 @@
+
+
+.songSaver-container{
+    /* height: 100%; */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+    background-color: orange;
+}
+.sortsection{
+    display: flex;
+    gap: 10px;
+    /* border: 3px solid black; */
+}
