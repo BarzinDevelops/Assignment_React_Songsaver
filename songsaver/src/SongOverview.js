@@ -13,17 +13,24 @@ class SongOverview extends Component {
       songs: [
         {
           id: 1,
-          title: "stay in live",
-          artist: "beegees",
-          genre: "pop",
-          rating: "4",
+          title: "Domen zijn bedrog",
+          artist: "Marco Borsato",
+          genre: "Pop",
+          rating: "3",
         },
         {
           id: 2,
-          title: "billi jean",
-          artist: "Michael Jackson",
+          title: "Dust in the Wind",
+          artist: "Kansas",
           genre: "Rock",
-          rating: "5",
+          rating: "4",
+        },
+        {
+          id: 3,
+          title: "Billi Jean",
+          artist: "Michael Jackson",
+          genre: "Pop",
+          rating: "4",
         },
       ],
     };
@@ -87,8 +94,8 @@ class SongOverview extends Component {
           songs={this.state.songs}
         />
         <div className={classes.sortsection}>
-          <SortTitle sortTitle={this.sortSongTitle}/>
-          <SortRating sortRating={this.sortSongRating}/>
+          <SortTitle sortTitle={this.sortSongTitle} />
+          <SortRating sortRating={this.sortSongRating} />
         </div>
         <SongTable songs={this.state.songs} removeSong={this.removeSong}>
           <div>dit is song table</div>

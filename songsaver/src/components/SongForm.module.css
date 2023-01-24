@@ -1,12 +1,10 @@
 .input-card {
   width: 100%;
-  /* border: 3px solid blue; */
   padding: 8px 0px;
   box-shadow: 0 1px 8px rgba(0, 0, 0, 0.2);
   background-color: #f4f0fa;
 }
 .form {
-  /* border: 3px solid rgb(22, 11, 22); */
   display: flex;
   flex-wrap: wrap;
   align-items: center;

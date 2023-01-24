@@ -1,15 +1,13 @@
-
-
-.sort-wrapper{
-    border: 3px solid orangered;
-    padding: 10px;
+.sort-wrapper {
+  border: 3px solid orangered;
+  padding: 10px;
 }
 
-.song-sort{
-    padding: 10px;
-    border: none;
+.song-sort {
+  padding: 10px;
+  border: none;
 }
-.song-sort:focus{
-    background-color: #dbc6f4;
-    outline: none;
+.song-sort:focus {
+  background-color: #dbc6f4;
+  outline: none;
 }

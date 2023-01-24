@@ -27,8 +27,8 @@ const SongForm = (props) => {
               newSong.title = e.target.value;
             }}
           />
-          </div>
-<div className={classes.control}>
+        </div>
+        <div className={classes.control}>
           <input
             type="text"
             id="artist"
@@ -37,35 +37,35 @@ const SongForm = (props) => {
               newSong.artist = e.target.value;
             }}
           />
-          </div>
-        <div className={classes.selectors}>
-        <select
-          onBlur={(e) => {
-            newSong.genre = e.target.value;
-          }}
-        >
-          <option value="none">Choose your genre..</option>
-          <option value="Latin">Latin</option>
-          <option value="Rap">Rap</option>
-          <option value="Pop">Pop</option>
-          <option value="Rock">Rock</option>
-        </select>
         </div>
         <div className={classes.selectors}>
-        <select
-          onBlur={(e) => {
-            newSong.rating = e.target.value;
-          }}
-        >
-          <option value="none">Give your rating</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-        </select>
+          <select
+            onBlur={(e) => {
+              newSong.genre = e.target.value;
+            }}
+          >
+            <option value="none">Choose your genre..</option>
+            <option value="Latin">Latin</option>
+            <option value="Rap">Rap</option>
+            <option value="Pop">Pop</option>
+            <option value="Rock">Rock</option>
+          </select>
         </div>
-        <Button name={'Add Song'} />
+        <div className={classes.selectors}>
+          <select
+            onBlur={(e) => {
+              newSong.rating = e.target.value;
+            }}
+          >
+            <option value="none">Give your rating</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </div>
+        <Button name={"Add Song"} />
       </form>
     </div>
   );

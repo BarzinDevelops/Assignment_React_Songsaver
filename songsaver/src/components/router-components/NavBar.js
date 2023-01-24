@@ -1,5 +1,5 @@
 import React from "react";
-import classes from './NavBar.module.css';
+import classes from "./NavBar.module.css";
 
 const NavBar = () => {
   return (
@@ -15,5 +15,5 @@ const NavBar = () => {
       </ul>
     </div>
   );
-}
+};
 export default NavBar;
